@@ -17,7 +17,7 @@ class GetStateRunnable implements Runnable {
     }
 }
 
-class GetState {
+class CheckState {
 
     public static void main(String[] args) throws Exception {
         GetStateRunnable gsr = new GetStateRunnable();
