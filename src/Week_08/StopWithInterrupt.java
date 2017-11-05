@@ -4,8 +4,6 @@ package Week_08;
 
 class Worker implements Runnable {
 
-    private boolean isTerminated = false;
-
     @Override
     public void run() {
         int count = 0;
