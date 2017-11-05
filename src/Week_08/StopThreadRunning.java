@@ -1,6 +1,6 @@
 package Week_8;
 
-public class StopThread
+public class StopThreadRunning
 {   
     public static void main(String[] args) 
     {   
