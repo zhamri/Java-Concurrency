@@ -1,13 +1,13 @@
-
 package Week_8;
 
 public class StopThread
 {   
     public static void main(String[] args) 
-    {
-        MyThread thread = new MyThread();
+    {   
+        
+        MyThread t1 = new MyThread();
          
-        thread.start();
+        t1.start();
          
         try
         {
@@ -18,7 +18,7 @@ public class StopThread
             e.printStackTrace();
         }
          
-        thread.stopRunning();
+        t1.stopRunning();
     }    
 }
 
