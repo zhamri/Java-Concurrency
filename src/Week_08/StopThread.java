@@ -1,39 +1,35 @@
-package com.issue.rt_issue_08_01.stopThread;
+package Week08_01;
 
-public class StopThread extends Thread implements Runnable {
+import static java.lang.Thread.currentThread;
+import java.util.concurrent.TimeUnit;
 
-    private volatile boolean flag = true;
-
-    public void stopRunning() {
-        flag = false;
+/**
+ *
+ * @author Aman
+ */
+public class StopThread {
+    public static void main(String args[]) throws InterruptedException { 
+        
+        int processors = Runtime.getRuntime().availableProcessors();
+        System.out.println("Processors: "+processors);
+        
+        Server myServer = new Server(); Thread test = new Thread(myServer, "Test"); 
+        test.start();
+        System.out.println(currentThread().getName() + " is stopping Server thread"); 
+        myServer.stop(); 
+        TimeUnit.MILLISECONDS.sleep(1000);
+        System.out.println(currentThread().getName() + " is finished now"); 
     }
-
+}
+class Server implements Runnable{ 
+    private volatile boolean exit = false; 
     @Override
-    public void run() {
-        int count = 0;
-        while (flag) {
-            System.out.println("Hello from worker class... " + count++);
-            
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-        }
-        System.out.println("Finished...");
-    }
-
-    public static void main(String[] args) {
-        StopThread thread = new StopThread();
-        thread.start();
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        thread.stopRunning();
-    }
+    public void run() { 
+        while(!exit){ 
+        System.out.println("Server is running....."); 
+        } 
+    System.out.println("Server is stopped...."); 
+    } 
+    public void stop(){ exit = true; 
+    } 
 }
