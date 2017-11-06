@@ -12,7 +12,7 @@ class MyThread extends Thread
     }
 }
  
-public class StopThread
+public class StopRunThread
 {   
     public static void main(String[] args) 
     {
