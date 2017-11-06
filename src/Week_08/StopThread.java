@@ -1,3 +1,4 @@
+
 class MyThread extends Thread
 {    
     @Override
@@ -34,3 +35,4 @@ public class StopRunThread
         thread.interrupt();
     }    
 }
+
