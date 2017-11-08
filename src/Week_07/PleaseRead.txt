@@ -1,0 +1,9 @@
+Please Read
+
+https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Lock.html
+
+https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html
+
+https://netjs.blogspot.my/2016/02/difference-between-reentrantlock-and-synchronized-java.html
+
+https://netjs.blogspot.my/2016/02/reentrantlock-in-java-concurrency.html
